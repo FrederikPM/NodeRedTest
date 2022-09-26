@@ -1,0 +1,869 @@
+[
+    {
+        "id": "494e7808cb2043e0",
+        "type": "tab",
+        "label": "Simu",
+        "disabled": false,
+        "info": "Simulation\r\n",
+        "env": []
+    },
+    {
+        "id": "94cc45dfc0e4d6aa",
+        "type": "tab",
+        "label": "MQTT demo",
+        "disabled": false,
+        "info": "",
+        "env": []
+    },
+    {
+        "id": "311268051ba3e2e9",
+        "type": "group",
+        "z": "494e7808cb2043e0",
+        "name": "Real-world measurements",
+        "style": {
+            "label": true
+        },
+        "nodes": [
+            "e2d4960d336f2253",
+            "b721ba41371c39e1",
+            "50e0f61a77790fde",
+            "8ad047e3e9bb59b4",
+            "72c3dc36b7dff5b8",
+            "4323846a140dee89",
+            "fe1623021881dc06",
+            "bc55ea0955065497",
+            "3a7b4073115676d9",
+            "b1b53d94dfa87894",
+            "cf0d8bea0ce1a9b7",
+            "ed99085e05e8cf4e",
+            "0f9fd59c581c62be",
+            "ae44d75564dc95ee"
+        ],
+        "x": 14,
+        "y": 119,
+        "w": 1272,
+        "h": 242
+    },
+    {
+        "id": "4119499f.d195b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "wss://mqtt.iot-mapper.alexandrainst.dk/",
+        "port": "",
+        "clientid": "",
+        "autoConnect": true,
+        "usetls": false,
+        "compatmode": false,
+        "protocolVersion": "5",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "20ae1e52d1eef983",
+        "type": "postgreSQLConfig",
+        "name": "timescale",
+        "host": "timescale",
+        "hostFieldType": "str",
+        "port": "5432",
+        "portFieldType": "num",
+        "database": "POSTGRES_DB",
+        "databaseFieldType": "env",
+        "ssl": "false",
+        "sslFieldType": "bool",
+        "max": "10",
+        "maxFieldType": "num",
+        "min": "1",
+        "minFieldType": "num",
+        "idle": "1000",
+        "idleFieldType": "num",
+        "connectionTimeout": "10000",
+        "connectionTimeoutFieldType": "num",
+        "user": "POSTGRES_USER",
+        "userFieldType": "env",
+        "password": "POSTGRESS_PASSWORD",
+        "passwordFieldType": "env"
+    },
+    {
+        "id": "88826bc308dbb417",
+        "type": "ui_group",
+        "name": "Simulation",
+        "tab": "2f191470757a28ce",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "2f191470757a28ce",
+        "type": "ui_tab",
+        "name": "Simulation",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "7791cd9bc93f8980",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "c7c12c9e4382c672",
+        "type": "debug",
+        "z": "494e7808cb2043e0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 490,
+        "y": 60,
+        "wires": []
+    },
+    {
+        "id": "fb34b35a557c7fc5",
+        "type": "postgresql",
+        "z": "494e7808cb2043e0",
+        "name": "SQL CREATE TABLE",
+        "query": "DROP TABLE IF EXISTS simulation;\nCREATE TABLE simulation (\n\tid\t\tSERIAL\tNOT NULL,\n\ttime\tTIMESTAMP WITH TIME ZONE\tNOT NULL,\n\tsensor\tTEXT,\n\tdata\tJSONB,\n\tsimulated\tBOOLEAN\tDEFAULT FALSE,\n\tsimulated_time\tTIMESTAMP WITH TIME ZONE\n);\n\nSELECT create_hypertable('simulation', 'time');\nCREATE INDEX IF NOT EXISTS index_sensor ON simulation(\"sensor\");\nCREATE INDEX IF NOT EXISTS index_simulated ON simulation(\"simulated\");\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 300,
+        "y": 60,
+        "wires": [
+            [
+                "c7c12c9e4382c672"
+            ]
+        ]
+    },
+    {
+        "id": "845612717304751d",
+        "type": "inject",
+        "z": "494e7808cb2043e0",
+        "name": "Trigger",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 60,
+        "wires": [
+            [
+                "fb34b35a557c7fc5"
+            ]
+        ]
+    },
+    {
+        "id": "e2d4960d336f2253",
+        "type": "ui_slider",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "label": "Indoor temperature",
+        "tooltip": "",
+        "group": "88826bc308dbb417",
+        "order": 1,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-50",
+        "max": "50",
+        "step": 1,
+        "className": "",
+        "x": 290,
+        "y": 160,
+        "wires": [
+            [
+                "50e0f61a77790fde"
+            ]
+        ]
+    },
+    {
+        "id": "b721ba41371c39e1",
+        "type": "inject",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "20",
+        "payloadType": "num",
+        "x": 110,
+        "y": 160,
+        "wires": [
+            [
+                "e2d4960d336f2253"
+            ]
+        ]
+    },
+    {
+        "id": "50e0f61a77790fde",
+        "type": "change",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "indoorTemperature",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 160,
+        "wires": [
+            [
+                "cf0d8bea0ce1a9b7"
+            ]
+        ]
+    },
+    {
+        "id": "8ad047e3e9bb59b4",
+        "type": "ui_slider",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "label": "Outdoor temperature",
+        "tooltip": "",
+        "group": "88826bc308dbb417",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-50",
+        "max": "50",
+        "step": 1,
+        "className": "",
+        "x": 300,
+        "y": 240,
+        "wires": [
+            [
+                "4323846a140dee89"
+            ]
+        ]
+    },
+    {
+        "id": "72c3dc36b7dff5b8",
+        "type": "inject",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "10",
+        "payloadType": "num",
+        "x": 110,
+        "y": 240,
+        "wires": [
+            [
+                "8ad047e3e9bb59b4"
+            ]
+        ]
+    },
+    {
+        "id": "4323846a140dee89",
+        "type": "change",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "outdoorTemperature",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 560,
+        "y": 240,
+        "wires": [
+            [
+                "ed99085e05e8cf4e"
+            ]
+        ]
+    },
+    {
+        "id": "fe1623021881dc06",
+        "type": "ui_slider",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "label": "UV index",
+        "tooltip": "",
+        "group": "88826bc308dbb417",
+        "order": 3,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "end",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "0",
+        "max": "15",
+        "step": 1,
+        "className": "",
+        "x": 260,
+        "y": 320,
+        "wires": [
+            [
+                "3a7b4073115676d9"
+            ]
+        ]
+    },
+    {
+        "id": "bc55ea0955065497",
+        "type": "inject",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "1",
+        "payloadType": "num",
+        "x": 110,
+        "y": 320,
+        "wires": [
+            [
+                "fe1623021881dc06"
+            ]
+        ]
+    },
+    {
+        "id": "3a7b4073115676d9",
+        "type": "change",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "rules": [
+            {
+                "t": "set",
+                "p": "uvIndex",
+                "pt": "flow",
+                "to": "payload",
+                "tot": "msg"
+            }
+        ],
+        "action": "",
+        "property": "",
+        "from": "",
+        "to": "",
+        "reg": false,
+        "x": 520,
+        "y": 320,
+        "wires": [
+            [
+                "0f9fd59c581c62be"
+            ]
+        ]
+    },
+    {
+        "id": "b1b53d94dfa87894",
+        "type": "postgresql",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "SQL INSERT",
+        "query": "INSERT INTO simulation(time, sensor, data)\nVALUES ('{{{msg.payload.time}}}', '{{{msg.payload.sensor}}}', '{{{msg.payload.data}}}');\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1030,
+        "y": 240,
+        "wires": [
+            [
+                "ae44d75564dc95ee"
+            ]
+        ]
+    },
+    {
+        "id": "cf0d8bea0ce1a9b7",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "Value",
+        "func": "msg.payload = {\n    time: (new Date()).toISOString(),\n    sensor: \"indoorTemperature\",\n    data: JSON.stringify({\n        temperature: +msg.payload,\n    }),\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 160,
+        "wires": [
+            [
+                "b1b53d94dfa87894"
+            ]
+        ]
+    },
+    {
+        "id": "ed99085e05e8cf4e",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "Value",
+        "func": "msg.payload = {\n    time: (new Date()).toISOString(),\n    sensor: \"outdoorTemperature\",\n    data: JSON.stringify({\n        temperature: +msg.payload,\n    }),\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 240,
+        "wires": [
+            [
+                "b1b53d94dfa87894"
+            ]
+        ]
+    },
+    {
+        "id": "0f9fd59c581c62be",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "Value",
+        "func": "msg.payload = {\n    time: (new Date()).toISOString(),\n    sensor: \"uvIndex\",\n    data: JSON.stringify({\n        uv: +msg.payload,\n    }),\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 770,
+        "y": 320,
+        "wires": [
+            [
+                "b1b53d94dfa87894"
+            ]
+        ]
+    },
+    {
+        "id": "4d9d8b6d1eb4bdc1",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "name": "Simulation runs",
+        "func": "const STEP_MS = 60 * 1000;\nconst AHEAD_MS = 3600 * 1000;\n\nif (msg.sim && msg.sim.simulationTimeMs) {\n    // During simulation iterations\n    if (msg.sim.simulationTimeMs < Date.now() + AHEAD_MS) {\n        // Continue one more iteration\n        msg.sim.previousSimulationTimeMs = msg.sim.simulationTimeMs;\n        msg.sim.simulationTimeMs += STEP_MS;\n        return msg;\n    }\n    // Stop iterations\n} else {\n    // First simulation iteration\n    msg.sim = {\n        realworldTimeMs: Date.now(),\n        previousSimulationTimeMs: Date.now(),\n        simulationTimeMs: Date.now() + STEP_MS,\n        indoorTemperature: flow.get('indoorTemperature'),\n        outdoorTemperature: flow.get('outdoorTemperature'),\n        uvIndex: flow.get('uvIndex'),\n    };\n    return msg;\n}\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 480,
+        "y": 420,
+        "wires": [
+            [
+                "f57c18f6f8b7cd26"
+            ]
+        ]
+    },
+    {
+        "id": "f57c18f6f8b7cd26",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "name": "Effect of outdoor temperature",
+        "func": "const deltaT = (msg.sim.simulationTimeMs - msg.sim.previousSimulationTimeMs) / 1000;\nconst deltaC = msg.sim.outdoorTemperature - msg.sim.indoorTemperature;\n\n// Basic model: convergeance of 5°C per hour\nmsg.sim.indoorTemperature += Math.sign(deltaC) * Math.min(Math.abs(deltaC), 5.0) * deltaT / 3600;\n\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 710,
+        "y": 420,
+        "wires": [
+            [
+                "0e0bd40b9c9e4090"
+            ]
+        ]
+    },
+    {
+        "id": "ae44d75564dc95ee",
+        "type": "debug",
+        "z": "494e7808cb2043e0",
+        "g": "311268051ba3e2e9",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1190,
+        "y": 240,
+        "wires": []
+    },
+    {
+        "id": "f3988d0166654828",
+        "type": "debug",
+        "z": "494e7808cb2043e0",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": false,
+        "complete": "true",
+        "targetType": "full",
+        "statusVal": "",
+        "statusType": "auto",
+        "x": 1370,
+        "y": 420,
+        "wires": []
+    },
+    {
+        "id": "0e0bd40b9c9e4090",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "name": "Effect of sun",
+        "func": "if (msg.sim.indoorTemperature < 50) {\n    const deltaT = (msg.sim.simulationTimeMs - msg.sim.previousSimulationTimeMs) / 1000;\n    \n    // Basic model: convergeance of 2°C per hour per UV index\n    msg.sim.indoorTemperature += 2 * msg.sim.uvIndex * deltaT / 3600;\n}\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 930,
+        "y": 420,
+        "wires": [
+            [
+                "1c809ca2e239da8d"
+            ]
+        ]
+    },
+    {
+        "id": "d1ec8b33a05c3e8e",
+        "type": "ui_button",
+        "z": "494e7808cb2043e0",
+        "name": "",
+        "group": "88826bc308dbb417",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "label": "Simulate",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 100,
+        "y": 420,
+        "wires": [
+            [
+                "4d9d8b6d1eb4bdc1"
+            ]
+        ]
+    },
+    {
+        "id": "1c809ca2e239da8d",
+        "type": "function",
+        "z": "494e7808cb2043e0",
+        "name": "Value",
+        "func": "msg.payload = {\n    time: (new Date(msg.sim.simulationTimeMs)).toISOString(),\n    sensor: \"indoorTemperature\",\n    data: JSON.stringify({\n        temperature: Math.round(msg.sim.indoorTemperature * 100) / 100.0,\n    }),\n    simulated: true,\n    simulated_time: new Date(msg.sim.realworldTimeMs).toISOString(),\n};\nreturn msg;\n",
+        "outputs": 1,
+        "noerr": 0,
+        "initialize": "",
+        "finalize": "",
+        "libs": [],
+        "x": 1070,
+        "y": 420,
+        "wires": [
+            [
+                "9feb46e5af78bdc5"
+            ]
+        ]
+    },
+    {
+        "id": "9feb46e5af78bdc5",
+        "type": "postgresql",
+        "z": "494e7808cb2043e0",
+        "name": "SQL INSERT",
+        "query": "INSERT INTO simulation(time, sensor, data, simulated, simulated_time)\nVALUES ('{{{msg.payload.time}}}', '{{{msg.payload.sensor}}}', '{{{msg.payload.data}}}', true, '{{{msg.payload.simulated_time}}}');\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 1210,
+        "y": 420,
+        "wires": [
+            [
+                "f3988d0166654828",
+                "4d9d8b6d1eb4bdc1"
+            ]
+        ]
+    },
+    {
+        "id": "d31dfab9e901bd5a",
+        "type": "postgresql",
+        "z": "494e7808cb2043e0",
+        "name": "SQL DELETE",
+        "query": "DELETE FROM simulation WHERE simulated = true;\n",
+        "postgreSQLConfig": "20ae1e52d1eef983",
+        "split": false,
+        "rowsPerMsg": 1,
+        "outputs": 1,
+        "x": 280,
+        "y": 460,
+        "wires": [
+            [
+                "4d9d8b6d1eb4bdc1"
+            ]
+        ]
+    },
+    {
+        "id": "5bdce3a7.908f7c",
+        "type": "mqtt in",
+        "z": "94cc45dfc0e4d6aa",
+        "name": "",
+        "topic": "/iot/test",
+        "qos": "0",
+        "datatype": "auto",
+        "broker": "4119499f.d195b",
+        "nl": false,
+        "rap": false,
+        "inputs": 0,
+        "x": 250,
+        "y": 180,
+        "wires": [
+            [
+                "48d8ecc7.678dbc"
+            ]
+        ]
+    },
+    {
+        "id": "48d8ecc7.678dbc",
+        "type": "debug",
+        "z": "94cc45dfc0e4d6aa",
+        "name": "",
+        "active": true,
+        "tosidebar": true,
+        "console": false,
+        "tostatus": true,
+        "complete": "payload",
+        "targetType": "msg",
+        "statusVal": "payload",
+        "statusType": "auto",
+        "x": 410,
+        "y": 180,
+        "wires": []
+    },
+    {
+        "id": "3b64d8bf.b1d9c",
+        "type": "inject",
+        "z": "94cc45dfc0e4d6aa",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            },
+            {
+                "p": "topic",
+                "vt": "str"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "",
+        "payloadType": "date",
+        "x": 110,
+        "y": 120,
+        "wires": [
+            [
+                "12444b6e.b12afd"
+            ]
+        ]
+    },
+    {
+        "id": "12444b6e.b12afd",
+        "type": "mqtt out",
+        "z": "94cc45dfc0e4d6aa",
+        "name": "",
+        "topic": "/iot/test",
+        "qos": "0",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "4119499f.d195b",
+        "x": 260,
+        "y": 120,
+        "wires": []
+    },
+    {
+        "id": "7b5a6131.cbb6b8",
+        "type": "comment",
+        "z": "94cc45dfc0e4d6aa",
+        "name": "External over WebSocket secure",
+        "info": "",
+        "x": 170,
+        "y": 60,
+        "wires": []
+    }
+]
