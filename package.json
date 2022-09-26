@@ -2,7 +2,13 @@
     "name": "test_project",
     "description": "A Node-RED Project",
     "version": "0.0.1",
-    "dependencies": {},
+    "dependencies": {
+        "node-red-contrib-chunks-to-lines": "~0.6.0",
+        "node-red-contrib-json-multi-schema": "~1.4.2",
+        "node-red-contrib-postgresql": "~0.9.0",
+        "node-red-contrib-ui-upload": "~0.5.1",
+        "node-red-dashboard": "~3.1.6"
+    },
     "node-red": {
         "settings": {
             "flowFile": "flows.json",
