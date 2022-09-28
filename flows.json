@@ -85,8 +85,6 @@
         "sslFieldType": "bool",
         "max": "10",
         "maxFieldType": "num",
-        "min": "1",
-        "minFieldType": "num",
         "idle": "1000",
         "idleFieldType": "num",
         "connectionTimeout": "10000",
@@ -765,7 +763,7 @@
         "rowsPerMsg": 1,
         "outputs": 1,
         "x": 280,
-        "y": 460,
+        "y": 480,
         "wires": [
             [
                 "4d9d8b6d1eb4bdc1"
